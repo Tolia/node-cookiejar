@@ -163,6 +163,10 @@
         if (this instanceof CookieJar) {
             cookies = Object.create(null); //name: [Cookie]
 
+            this.toHash = function toHash() {
+              return cookies
+            }
+            
             this.setCookie = function setCookie(cookie, request_domain, request_path) {
                 var remove, i;
                 cookie = new Cookie(cookie, request_domain, request_path);
