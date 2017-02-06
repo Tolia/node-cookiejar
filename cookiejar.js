@@ -163,6 +163,10 @@
         if (this instanceof CookieJar) {
             cookies = Object.create(null); //name: [Cookie]
 
+            this.getCookiesList = function getCookiesList() {
+              return cookies_list
+            }
+            
             this.toHash = function toHash() {
               return cookies
             }
